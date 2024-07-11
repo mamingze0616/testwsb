@@ -1,0 +1,226 @@
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<h2>Hello2023<br/> World!</h2>
+<b1 style="font-family: Papyrus; color: chartreuse">我的第一个标题</b1>
+<br><br>
+<em style="background-color: aquamarine">我的<sup>22</sup>3<sub>22</sub>第一个段落。</em>
+<pre style="font-size: x-large">你好
+Hello   bye
+    再见</pre>
+<address>Written by <a href="manah.com">Wen</a><br>
+    Visit us by
+</address>
+<abbr title="etcetera">etc.</abbr><br>
+<p><bdo dir="rtl">右到左显示</bdo></p>
+<p><bdo dir="ltr">右到左显示</bdo></p>
+<blockquote>
+    <p>An apple a day keeps the doctor away.</blockquote><br>
+<footer>    --John</footer><br></p>
+
+
+<p>My favourite food is <del>apple</del> <ins>banana</ins>.</p>
+<p><img border="10" src="C:\Users\wangh\Desktop\laoshu.jpg" alt="mouse" width="100"  hight="100" ></img.src></p>
+
+<table border="1">
+<tr>
+    <td>123</td>
+</tr>
+</table><br>
+<table border="10">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table><br>
+<table>
+    <caption>number</caption>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table><br>
+
+<table border="1">
+    <caption>number</caption>
+    <tr>
+        <th>1</th>
+        <th colspan="2">2</th>
+
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table><br>
+<table border="1">
+    <caption>number</caption>
+    <tr>
+        <th>1</th>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <th rowspan="2">4</th>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>9</td>
+    </tr>
+</table><br>
+<table border="1" cellpadding="10" cellspacing="10">
+    <caption>number</caption>
+    <tr>
+        <td>第一行第一列</td>
+<td><p>四宫格</p>
+    <table>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>coffee</li>
+                <li>milk</li>
+                <li>bread</li>
+            </ul>
+        </td>
+        <td>
+            <ol start="5">
+                <li>abcd</li>
+                <li>efgh</li>
+                <li>ijkl</li>
+            </ol>
+        </td>
+    </tr>
+</table><br>
+
+<ol type="I">
+    <li>张三</li>
+    <li>李四</li>
+    <li>王五</li>
+</ol>
+
+<ul style="list-style-type: circle">
+    <li>def
+    <ul style="list-style-type: square">
+    <li>123</li>
+    <li>456</li>
+    <li>789</li>
+</ul></li>
+    <li>abc</li>
+</ul>
+<dl>
+    <dt>coffee</dt>
+    <dd>hot</dd>
+    <dd>sweet</dd>
+    <dt>bread</dt>
+    <dd>butter</dd>
+</dl>
+<!--此行为注释-->
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #b55656;">
+    <script>
+        var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+        ctx.fillStyle="#ff952c";
+        ctx.fillRect(20,20,150,100);
+    </script>
+</canvas><br><br>
+<canvas id="mCanvas" width="300" height="150" style="border:5px solid rgba(237,50,50,0.66);">
+    您的浏览器不支持 HTML5 canvas 标签。
+</canvas>
+<script>
+    var c=document.getElementById("mCanvas");
+    var ctx=c.getContext("2d");
+    var my_gradient=ctx.createLinearGradient(30,20,150,20);
+    my_gradient.addColorStop(0,"green");
+    my_gradient.addColorStop(1,"red");
+    ctx.fillStyle=my_gradient;
+    ctx.fillRect(10,10,100,180);
+</script><br>
+<canvas id="Canvas" width="300" height="150" style="border:1px solid #f3f328;">
+    您的浏览器不支持 HTML5 canvas 标签
+</canvas>
+<script>
+    var c=document.getElementById("Canvas");
+    var ctx=c.getContext("2d");
+    var my_gradient=ctx.createLinearGradient(0,0,170,0);
+    my_gradient.addColorStop(0,"black");
+    my_gradient.addColorStop(1,"white");
+    ctx.fillStyle=my_gradient;
+    ctx.fillRect(20,20,150,100);
+</script><br><br>
+<canvas id="anvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。
+</canvas>
+<script>
+    var c=document.getElementById("anvas");
+    var ctx=c.getContext("2d");
+    var grd=ctx.createLinearGradient(0,0,170,0);
+    grd.addColorStop(0,"black");
+    grd.addColorStop(0.5,"red");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle=grd;
+    ctx.fillRect(20,20,150,100);
+</script><br>
+
+<p>图片应用:</p>
+<img src="C:\Users\wangh\Desktop\laoshu.jpg" id="mouse" width="40" height="40">
+<p>画布:</p>
+<button onclick="draw('repeat')">重复</button>
+<button onclick="draw('repeat-x')">重复-x</button>
+<button onclick="draw('repeat-y')">重复-y</button>
+<button onclick="draw('no-repeat')">不重复</button>
+<canvas id="nvas" width="300" height="150" style="border:10px solid #f61a1a;">
+</canvas>
+<script>
+    function draw(direction)
+    {
+        var c=document.getElementById("nvas");
+        var ctx=c.getContext("2d");
+        ctx.clearRect(0,0,c.width,c.height);
+        var img=document.getElementById("mouse")
+        var pat=ctx.createPattern(img,direction);
+        ctx.rect(0,0,100,100);
+        ctx.fillStyle=pat;
+        ctx.fill();
+    }
+</script>
+
+
+</body>
+</html>
+
