@@ -1,9 +1,11 @@
 package com.apex.bss.servlet;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+
 
 public class HelloWorldServvlet extends HttpServlet {
 
@@ -14,6 +16,6 @@ public class HelloWorldServvlet extends HttpServlet {
         response.setContentType("text/html");
         // 实际的逻辑是在这里
         PrintWriter out = response.getWriter();
-        out.println("<h1>helloworld</h1>");
+        out.println("<h1>hell22oworld</h1>");
     }
 }
