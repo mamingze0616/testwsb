@@ -5,12 +5,12 @@
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
     <servlet>
-        <servlet-name>ReadCookies</servlet-name>
-        <servlet-class>com.apex.bss.servlet.ReadCookies</servlet-class>
+        <servlet-name>springDispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ReadCookies</servlet-name>
-        <url-pattern>/ReadCookies</url-pattern>
+        <servlet-name>springDispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>
