@@ -7,6 +7,10 @@
     <servlet>
         <servlet-name>springDispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath*:spring/springConfig.xml</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>springDispatcher</servlet-name>
@@ -14,6 +18,6 @@
     </servlet-mapping>
 
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
