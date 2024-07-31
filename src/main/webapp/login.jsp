@@ -5,25 +5,7 @@
     <meta charset="UTF-8">
     <title>用户登录</title>
     <link href="<%=request.getContextPath()%>/css/login.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript">
-        var str = "qwertyupasdfghjkzxcvbnmQWERTYUPASDFGHJKLZXCVBNM23456789";
-
-        function login_yz() {
-            //验证 用户名 和 密码不能为空
-            //获取用户名
-            var uname = document.getElementById("uname").value;
-            if (uname.length == 0) {
-                alert("用户名不能为空");
-                return false;
-            }
-            //获取密码
-            var upwd = document.getElementById("upwd").value;
-            if (upwd.length == 0) {
-                alert("密码不能为空");
-                return false;
-            }
-        }
-    </script>
+    <script src="<%=request.getContextPath()%>/js/login.js"></script>
 </head>
 <body>
 <div id="login">
@@ -41,6 +23,7 @@
                     <img src="images/key.png"/>
                     <input type="password" id="upwd" name="upwd"/>
                 </div>
+                ${requestScope.error}
                 <div id="center-middle_bottom">
                     <button type="submit">登录</button>
                     <button type="reset">清空</button>
