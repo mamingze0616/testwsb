@@ -10,7 +10,7 @@ import java.io.IOException;
 @Controller
 public class LoginController {
 
-    @RequestMapping("/doLogin.do")
+    @RequestMapping("/doLogin")
     public String doLogin(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String name=request.getParameter("name");
         String url=request.getParameter("url");
