@@ -1,5 +1,11 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     height: 100%;
+    margin: unset;
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,54 +13,56 @@ body {
 }
 
 #login {
-    /*height: 100%;*/
-    height: 500px;
+    height: 100%;
+    /*height: 500px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #login #top {
     display: flex;
     flex-direction: row;
-    color: #fcfcfc;
-    /*justify-content: space-between;*/
-    }
+    /*background-color: #d0e4fe;*/
+    /*height: 70px;*/
+    padding: 20px;
+}
 
-#top img{
-
-    padding-block: 5px;
-    background-color: #baa8d8;
+#imgDiv{
+    height: 20px;
+    width: 90px;
+    background-image: url("../images/logo.png");
+    background-size: 90px;
 }
 
 
 #login #center {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    /*background-color: #ffffb3;*/
-    width: 100%;
-    height: 150px;
-    image-size: 38px
-
+    justify-content: space-around;
 }
-#u
 #center_middle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #b55656;
-    height: 150px;
+    background-color: white;
+    /*opacity: 0.5;*/
+    /*  height: 150px; */
     padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
-    border: 2px solid #eac2f4;
+    border: 1px solid white;
+    border-radius: 20px;
 }
 
+
 #center-middle_bottom {
-    background-color: #f3f328;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    justify-content: space-between;
+
 }
 
 
@@ -76,7 +84,7 @@ body {
     padding-left: 9px;
     padding-right: 9px;
     margin:5px;
-    background-color: #fcfcfc;
+    /*background-color: #fcfcfc;*/
     border-radius: 20px;
 }
 
@@ -84,13 +92,12 @@ body {
 #login #down {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     color: #fffdff;
 }
 
 #btn {
-    display: flex;
-    justify-content: space-around;
+
 }
 
 
