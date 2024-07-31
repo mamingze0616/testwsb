@@ -12,8 +12,9 @@ import java.sql.SQLException;
 public class LoginController {
 
     @RequestMapping("/doLogin")
-    public String doLogin(@RequestParam String uname, @RequestParam String upwd) throws SQLException {
+    public String doLogin(@RequestParam String uname, @RequestParam String upwd) throws SQLException, ClassNotFoundException {
         // JDBC连接的URL, 不同数据库有不同的格式:
+        Class.forName("com.mysql.jdbc.Driver");
         String JDBC_URL = "jdbc:mysql://localhost:3306/mydatabase";
         String JDBC_USER = "root";
         String JDBC_PASSWORD = "Qwj20050517";
