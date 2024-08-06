@@ -1,0 +1,33 @@
+
+#login .registerForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+
+}
+.registerForm input{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+#middle_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+#middle_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+}

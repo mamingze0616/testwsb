@@ -35,8 +35,9 @@ body {
 
 #login #center {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 #center_middle {
     display: flex;
@@ -54,6 +55,7 @@ body {
 
 #center-middle_bottom {
     display: flex;
+    flex-direction: row;
     padding-left: 40px;
     padding-right: 40px;
     justify-content: space-between;
@@ -85,3 +87,7 @@ body {
     justify-content: space-around;
     color: #fffdff;
 }
+
+
+
+
