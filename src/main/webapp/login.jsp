@@ -15,20 +15,20 @@
         <span style="padding-left: 20px;color: white">南方基金</span>
     </div>
     <div id="center">
-        <form id="center_middle" action="doLogin" onsubmit="return login_yz()">
+        <form id="center_middle" action="doLogin">
                 <div class="userdiv">
                     <img src="images/lock.png"/>
                     <input type="text" id="uname" name="uname" placeholder="用户名"/>
                 </div>
                 <div class="userdiv">
                     <img src="images/key.png"/>
-                    <input type="password" id="upwd" name="upwd"/>
+                    <input type="password" id="upwd" name="upwd"  placeholder="密码"/>
                 </div>
                 ${requestScope.error}
                 <div id="center-middle_bottom">
-                    <button type="submit">登录</button>
+                    <button type="submit" id="login_btn">登录</button>
                     <button type="reset">清空</button>
-                    <button type="button" onclick="register()">注册</button>
+                    <button type="button" id="register_btn">注册</button>
                 </div>
             </form>
     </div>
