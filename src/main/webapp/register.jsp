@@ -11,6 +11,8 @@
     <title>register</title>
     <link href="<%=request.getContextPath()%>/css/login.css" rel="stylesheet" type="text/css"/>
     <link href="<%=request.getContextPath()%>/css/register.css" rel="stylesheet" type="text/css"/>
+    <script src="<%=request.getContextPath()%>/js/jquery/jquery-3.7.1.js"></script>
+    <script src="<%=request.getContextPath()%>/js/register.js"></script>
 </head>
 
 <body>
@@ -20,15 +22,16 @@
         <span style="padding-left: 20px;color: white">南方基金</span>
     </div>
     <div id="center">
-        <form class="registerForm" action="doLogin" onsubmit="return register_yz()">
-            <div id="middle_left">
+        <form class="registerForm" action="doRegister" method="post">
+            <div id="middle">
+                <div id="middle_left">
                 <input type="text" id="uname" name="uname" placeholder="用户名"/>
-<%--                <input type="text" id="sex" name="sex" placeholder="性别"/>--%>
+                    <%--                <input type="text" id="sex" name="sex" placeholder="性别"/>--%>
                 <select name="sex" id="sex" placeholder="性别">
                     <option value="1">男</option>
                     <option value="2">女</option>
                 </select>
-<%--                <input type="text" id="nationality" name="nationality" placeholder="国籍"/>--%>
+                    <%--                <input type="text" id="nationality" name="nationality" placeholder="国籍"/>--%>
                 <select name="nationality" id="nationality" placeholder="国籍">
                     <option value="1">中国</option>
                     <option value="2">美国</option>
@@ -42,19 +45,21 @@
                 </select>
                 <input type="date" id="birthdate" name="birthdate" placeholder="出生日期"/>
             </div>
-            <div id="middle_right">
-                <input type="text" id="phonenumber" name="phonenumber" placeholder="手机号"/>
-                <input type="email" id="email" name="email" placeholder="邮箱"/>
-                <input type="password" id="upwd" name="upwd" placeholder="密码"/>
-                <input type="password" id="querenmima" name="querenmima" placeholder="确认密码"/>
+                <div id="middle_right">
+                    <input type="text" id="phonenumber" name="phonenumber" placeholder="手机号"/>
+                    <input type="email" id="email" name="email" placeholder="邮箱"/>
+                    <input type="password" id="upwd" name="upwd" placeholder="密码"/>
+                    <input type="password" id="querenmima" name="querenmima" placeholder="确认密码"/>
 
+                </div>
             </div>
-
+            ${requestScope.error}
+            <div id="center-middle_bottom">
+                <button type="submit" id="login_zhuce">注册</button>
+                <button type="reset">清空</button>
+            </div>
         </form>
-        <div id="center-middle_bottom">
-            <button type="submit">注册</button>
-            <button type="reset">清空</button>
-        </div>
+
 
     </div>
     <div id="down">

@@ -25,17 +25,21 @@ public class LoginController {
         try (Connection conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD)) {
             // TODO: 访问数据库...
             try (Statement stmt = conn.createStatement()) {
-                try (ResultSet rs = stmt.executeQuery("SELECT id, username, email FROM users where username='" + uname+"'")) {
+                String sql = "select * from users where username = '"+uname+"'";
+                System.out.println(sql);
+                try (ResultSet rs = stmt.executeQuery(sql)) {
+                    System.out.println("welcome");
                     if(rs.next()==false){
                         System.out.println("uer not exits");
                         request.setAttribute("error", "user not exits");
                         return "forward:/login.jsp";
                     }
                     while (rs.next()) {
+
                         long id = rs.getLong(1); // 注意：索引从1开始
                         String username = rs.getString(2);
                         String email = rs.getString(3);
-                        System.out.println("welcome"+id + ", " + username + "to our system!, your email is" + email);
+                        System.out.println("welcome id:"+id + ", username:" + username + " to our system!, your email is " + email);
                         request.setAttribute("email", email);
 
                     }

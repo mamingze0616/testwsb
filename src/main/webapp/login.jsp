@@ -15,7 +15,7 @@
         <span style="padding-left: 20px;color: white">南方基金</span>
     </div>
     <div id="center">
-        <form id="center_middle" action="doLogin">
+        <form id="center_middle" action="doLogin" method="post">
                 <div class="userdiv">
                     <img src="images/lock.png"/>
                     <input type="text" id="uname" name="uname" placeholder="用户名"/>
