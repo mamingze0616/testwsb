@@ -1,12 +1,12 @@
 package com.apex.bss.service;
 
+import com.apex.bss.config.JdbcConfig;
+
 import java.sql.*;
 
-public class RegisterService {
-    String JDBC_URL = "jdbc:mysql://localhost:3306/mydatabase";
-    String JDBC_USER = "root";
-    String JDBC_PASSWORD = "Qwj20050517";
+import static com.apex.bss.config.JdbcConfig.*;
 
+public class RegisterService {
 
     public int register(String uname, int sex, int nationality, String birthdate, String phonenumber, String email, String upwd) {
 

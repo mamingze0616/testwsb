@@ -18,7 +18,6 @@ public class HelloController {
         }
 
         return "hello";
-
     }
     @RequestMapping("/form")
     public String form(){

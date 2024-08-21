@@ -1,57 +1,54 @@
 package com.apex.bss.controller;
 
+import com.apex.bss.bean.UserInfo;
+import com.apex.bss.service.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
-import java.sql.*;
+import java.sql.SQLException;
 
 @Controller
 public class LoginController {
+    LoginService loginService = new LoginService();
 
     @RequestMapping("/doLogin")
-    public String doLogin(@RequestParam String uname, @RequestParam String upwd, HttpServletRequest request) {
-        // JDBC连接的URL, 不同数据库有不同的格式:
+    public String doLogin(@RequestParam String uname,
+                          @RequestParam String upwd,
+                          HttpServletRequest request) {
+
+
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        String JDBC_URL = "jdbc:mysql://localhost:3306/mydatabase";
-        String JDBC_USER = "root";
-        String JDBC_PASSWORD = "Qwj20050517";
-        // 获取连接:
-        try (Connection conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD)) {
-            // TODO: 访问数据库...
-            try (Statement stmt = conn.createStatement()) {
-                String sql = "select * from users where username = '"+uname+"'";
-                System.out.println(sql);
-                try (ResultSet rs = stmt.executeQuery(sql)) {
-                    System.out.println("welcome");
-                    if(rs.next()==false){
-                        System.out.println("uer not exits");
-                        request.setAttribute("error", "user not exits");
-                        return "forward:/login.jsp";
-                    }
-                    while (rs.next()) {
-
-                        long id = rs.getLong(1); // 注意：索引从1开始
-                        String username = rs.getString(2);
-                        String email = rs.getString(3);
-                        System.out.println("welcome id:"+id + ", username:" + username + " to our system!, your email is " + email);
-                        request.setAttribute("email", email);
-
-                    }
+            //先判断有没有该用户
+            if (loginService.queryUserByUserName(uname)) {
+                //判断密码是否正确
+                if (loginService.login(uname, upwd)) {
+                    //返回index
+                    //密码正确情况下，获取用户信息
+                    UserInfo userInfo = loginService.queryUserInfoByUserName(uname);
+                    request.setAttribute("email", userInfo.getEmail());
+                    request.setAttribute("userInfo", userInfo);
+                    return "index";
+                } else {
+                    //返回error password error
+//              request.setAttribute("");
+//                    return login
+                    return "forward:/login.jsp";
                 }
-            }
 
+
+            } else {
+                //返回error user not exits
+//              request.setAttribute("");
+                return "forward:/login.jsp";
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
 
-        return "index";
+//        return "index";
 
     }
 }

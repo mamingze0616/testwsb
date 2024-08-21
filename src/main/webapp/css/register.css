@@ -35,3 +35,29 @@
     display: flex;
     flex-direction: row;
 }
+#top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#paiban{
+
+    display: flex;
+    flex-direction: row;
+}
+#imgDi{
+    height: 40px;
+    width: 40px;
+    background-image: url("../images/laoshu.jpg");
+    background-size: 40px;
+    border-radius: 20px;
+}
+#paibann{
+    display: flex;
+    flex-direction: row;
+}
+#top{
+    border-width: 3px;
+    border-style: solid;
+    border-color: #d3d3d3;
+}
