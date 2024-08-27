@@ -43,6 +43,22 @@ public class UserInfo {
             return "中国";
         else if (nationality == 2)
             return "美国";
+        else if(nationality == 3)
+            return "英国";
+        else if(nationality == 4)
+            return "法国";
+        else if(nationality == 5)
+            return "德国";
+        else if(nationality == 6)
+            return "日本";
+        else if(nationality == 7)
+            return "韩国";
+        else if(nationality == 8)
+            return "俄罗斯";
+        else if(nationality == 9)
+            return "意大利";
+        else
+            return "新加坡";
 
     }
 
