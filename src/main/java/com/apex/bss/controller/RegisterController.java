@@ -24,6 +24,5 @@ public class RegisterController {
             return "index";
         }
 
-
     }
 }

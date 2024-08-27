@@ -23,16 +23,27 @@ public class UserInfo {
         this.email = email;
     }
 
-    public int getSex() {
-        return sex;
+    public String getSex() {
+        if (sex == 1)
+        {
+            return "男";
+        }else {
+            return "女";
+        }
+    }
+    private void when(boolean b) {
     }
 
     public void setSex(int sex) {
         this.sex = sex;
     }
 
-    public int getNationality() {
-        return nationality;
+    public String getNationality() {
+        if(nationality == 1)
+            return "中国";
+        else if (nationality == 2)
+            return "美国";
+
     }
 
     public void setNationality(int nationality) {

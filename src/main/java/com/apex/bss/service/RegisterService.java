@@ -23,8 +23,6 @@ public class RegisterService {
                         "values('"+uname+"',"+sex+","+nationality+",'"+birthdate+"',"+phonenumber+",'"+email+"','"+upwd+"')";
                 return stmt.executeUpdate(sql);
 
-
-
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
