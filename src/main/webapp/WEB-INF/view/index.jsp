@@ -26,20 +26,28 @@
             <div id="imgDi"></div>
             <div id="right" style="color: white;font-size: 20px;">${userInfo["username"]}</div>
         </div>
-
-
     </div>
+    welcome <%=request.getParameter("username")%> <br/>
     <div id="center">
-        <form class="registerForm" action="doRegister" method="post">
-            <div id="middle">
-                <input type="text" sex="sex" placeholder="sex" value=${userInfo["sex"]}>
-                welcome <%=request.getParameter("uname")%> <br/>
-                your email is ${userInfo["email"]}<br/>
-                your sex is ${userInfo["sex"]}<br/>
-                your nationality is ${userInfo["nationality"]}<br/>
-                your phonenumber is ${userInfo["phonenumber"]}<br/>
+        <div id="middle">
+            <%--            <input type="text" sex="sex" placeholder="sex" value=${userInfo["sex"]}>--%>
+            <div>
+                <div>email:</div>
+                <div> ${userInfo["email"]}</div>
             </div>
-        </form>
+            <div>
+                <div>性别:</div>
+                <div> ${userInfo["sex"]}</div>
+            </div>
+            <div>
+                <div>国籍:</div>
+                <div> ${userInfo["nationality"]}</div>
+            </div>
+            <div>
+                <div>手机:</div>
+                <div> ${userInfo["phonenumber"]}</div>
+            </div>
+        </div>
     </div>
     <div id="down">
         <span class="inf_text">版本信息管理信息系统2008 v2.0</span>
